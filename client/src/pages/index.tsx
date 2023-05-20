@@ -1,3 +1,4 @@
+import RootLayout from "@/components/layout/layout";
 import React from "react";
 
 function HomePage() {
