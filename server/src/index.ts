@@ -75,37 +75,46 @@ app.delete("/users/:id", async (req, res) => {
     res.json(deletedUser);
 });
 
-app.post("/openai/", async(req, res) => {
+app.post("/lessongen/", async(req, res) => {
     console.log(req.body)
-    const { prompt } = req.body;
-
+    const {topic, difficulty, classData, otherRequire} = req.body;
+    let prompt = classData + " level "  + topic + " lesson plan " + difficulty + difficulty + "," + otherRequire;
     const configuration = new Configuration({
         apiKey: process.env.OPEN_API_KEY,
     });
-
     const openai = new OpenAIApi(configuration);
-    const topics = ["lessonPlan", "analogies", "misconceptions", "questions", "differentiate", "rubric", "reflection"];
-    let reponses: { [key: string]: string | undefined } = {};
-
-    for (let topic of topics) {
-        let finalP = prompt;
-        if(topic !== "lessonPlan") {
-            finalP = "Lesson plan " + topic + finalP
-        } else {
-            finalP = "Lesson plan" + finalP
-        }
-        const completion = await openai.createChatCompletion({
-            model: "gpt-3.5-turbo",
-            messages: [{role: "user", content: finalP}],
-        });
-
-        // Assumes the message is in completion.data.choices[0].message.content
-        if (completion.data.choices && completion.data.choices[0] && completion.data.choices[0].message) {
-            reponses[topic] = completion.data.choices[0].message.content;
-        }
-    }
-
-    console.log(reponses);
-    res.json(reponses);
+    const completion = await openai.createChatCompletion({
+        model: "gpt-3.5-turbo",
+        messages: [{role: "user", content: prompt}],
+    });
+    res.json(completion.data.choices[0].message);
 })
 
+app.post("/quizgen/", async(req, res) => {
+    console.log(req.body)
+    const {topic, difficulty, classData, otherRequire} = req.body;
+    let prompt = classData + " level "  + topic + " quiz " + difficulty + "," + otherRequire;
+    const configuration = new Configuration({
+        apiKey: process.env.OPEN_API_KEY,
+    });
+    const openai = new OpenAIApi(configuration);
+    const completion = await openai.createChatCompletion({
+        model: "gpt-3.5-turbo",
+        messages: [{role: "user", content: prompt}],
+    });
+    res.json(completion.data.choices[0].message);
+})
+
+// app.post("/quizregen/", async(req, res) => {
+//     let prompt = lastData + " level "  + lastTopic + " quiz " + lastDifficulty + "," + lastRequire;
+//     console.log(prompt)
+//     const configuration = new Configuration({
+//         apiKey: process.env.OPEN_API_KEY,
+//     });
+//     const openai = new OpenAIApi(configuration);
+//     const completion = await openai.createChatCompletion({
+//         model: "gpt-3.5-turbo",
+//         messages: [{role: "user", content: prompt}],
+//     });
+//     res.json(completion.data.choices[0].message);
+// })
