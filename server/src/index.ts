@@ -77,8 +77,9 @@ app.delete("/users/:id", async (req, res) => {
 
 app.post("/lessongen/", async(req, res) => {
     console.log(req.body)
-    const {topic, difficulty, classData, otherRequire} = req.body;
-    let prompt = classData + " level "  + topic + " lesson plan " + difficulty + difficulty + "," + otherRequire;
+    const {topic, difficulty, classData, otherRequire, standard} = req.body;
+    let prompt = classData + " level "  + topic + " lesson plan " + difficulty + difficulty + "," + otherRequire
+        + "compliance with " + standard;
     const configuration = new Configuration({
         apiKey: process.env.OPEN_API_KEY,
     });
@@ -92,8 +93,9 @@ app.post("/lessongen/", async(req, res) => {
 
 app.post("/quizgen/", async(req, res) => {
     console.log(req.body)
-    const {topic, difficulty, classData, otherRequire} = req.body;
-    let prompt = classData + " level "  + topic + " quiz " + difficulty + "," + otherRequire;
+    const {topic, difficulty, classData, otherRequire, standard} = req.body;
+    let prompt = classData + " level "  + topic + " quiz " + difficulty +
+        "," + otherRequire + "compliance with " + standard;
     const configuration = new Configuration({
         apiKey: process.env.OPEN_API_KEY,
     });
