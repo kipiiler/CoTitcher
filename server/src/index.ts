@@ -1,6 +1,7 @@
 import cors from 'cors';
 import * as dotenv from "dotenv";
 import prisma from "../lib/prisma";
+import { Configuration, OpenAIApi } from "openai";
 dotenv.config();
 
 import express, { Application, Request, Response } from "express";
@@ -46,10 +47,10 @@ app.get("/users/:id", async (req, res) => {
 // Create a new user
 app.post("/users", async (req, res) => {
     console.log(req);
-    const { email, firstName, lastName } = req.body;
+    const { email, firstName, lastName, password } = req.body;
 
     const newUser = await prisma.user.create({
-        data: { email, firstName, lastName },
+        data: { email, firstName, lastName, password },
     });
     res.status(201).json(newUser);
 });
@@ -57,10 +58,10 @@ app.post("/users", async (req, res) => {
 // Update a user
 app.put("/users/:id", async (req, res) => {
     const { id } = req.params;
-    const { email, firstName, lastName } = req.body;
+    const { email, firstName, lastName, password } = req.body;
     const updatedUser = await prisma.user.update({
         where: { id: parseInt(id) },
-        data: { email, firstName, lastName },
+        data: { email, firstName, lastName, password },
     });
     res.json(updatedUser);
 });
@@ -73,4 +74,38 @@ app.delete("/users/:id", async (req, res) => {
     });
     res.json(deletedUser);
 });
+
+app.post("/openai/", async(req, res) => {
+    console.log(req.body)
+    const { prompt } = req.body;
+
+    const configuration = new Configuration({
+        apiKey: process.env.OPEN_API_KEY,
+    });
+
+    const openai = new OpenAIApi(configuration);
+    const topics = ["lessonPlan", "analogies", "misconceptions", "questions", "differentiate", "rubric", "reflection"];
+    let reponses: { [key: string]: string | undefined } = {};
+
+    for (let topic of topics) {
+        let finalP = prompt;
+        if(topic !== "lessonPlan") {
+            finalP = "Lesson plan " + topic + finalP
+        } else {
+            finalP = "Lesson plan" + finalP
+        }
+        const completion = await openai.createChatCompletion({
+            model: "gpt-3.5-turbo",
+            messages: [{role: "user", content: finalP}],
+        });
+
+        // Assumes the message is in completion.data.choices[0].message.content
+        if (completion.data.choices && completion.data.choices[0] && completion.data.choices[0].message) {
+            reponses[topic] = completion.data.choices[0].message.content;
+        }
+    }
+
+    console.log(reponses);
+    res.json(reponses);
+})
 
