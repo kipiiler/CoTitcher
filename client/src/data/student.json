@@ -1,0 +1,136 @@
+[
+  {
+    "studentID": 2171789,
+    "firstName": "Hoang",
+    "lastName": "Nguyen",
+    "courses" : 
+    [
+      {
+        "course": "CSE339",
+        "courseDes": "Introduction to Machine Learning",
+        "grade": [{
+          "homework": [
+            {"title":"homework1", "grade": 100},
+             {"title":"homework2", "grade": 90}
+            ],
+          "quiz": [{"title":"quiz1", "grade": 100}],
+          "attendence": 100
+        }]
+      },
+      {
+        "course": "MATH201",
+        "courseDes": "Linear Algebra",
+        "grade": [
+          {
+            "homework": [
+              {"title": "homework1", "grade": 95},
+              {"title": "homework2", "grade": 85}
+            ],
+            "quiz": [
+              {"title": "quiz1", "grade": 90}
+            ],
+            "attendance": 95
+          }
+        ]
+      }
+    ],
+    "student_description": "Strong background in mathematics, aiming to secure an internship next summer.",
+    "suggested_materials": [
+      {
+        "course": "CSE339",
+        "suggested_books": ["Introduction to Algorithms", "Clean Code"],
+        "suggested_websites": ["https://www.geeksforgeeks.org/", "https://leetcode.com/"],
+        "suggested_videos": ["https://www.youtube.com/watch?v=HtSuA80QTyo", "https://www.youtube.com/watch?v=e5ik2UGjHBk"]
+      },
+      {
+        "course": "MATH201",
+        "suggested_books": ["Linear Algebra and Its Applications", "Matrix Analysis"],
+        "suggested_websites": ["https://www.khanacademy.org/math/linear-algebra", "https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/"],
+        "suggested_videos": ["https://www.youtube.com/watch?v=fNk_zzaMoSs", "https://www.youtube.com/watch?v=ZK3O402wf1c"]
+      }
+    ],
+    "student_anal": "It has shown consistent improvement in their performance over the five recent homework assignments. Their scores have steadily increased, indicating a deeper understanding of the material and a growing mastery of the subject matter. This upward trend suggests that the student is actively engaged in their studies and making commendable efforts to excel academically. Continued support and guidance will help nurture their potential even further." 
+  },
+    {
+    "studentID": 2345678,
+    "firstName": "Emma",
+    "lastName": "Johnson",
+    "courses": [
+      {
+        "course": "ENG101",
+        "courseDes": "Introduction to English",
+        "grade": [
+          {
+            "homework": [
+              {"title": "essay1", "grade": 95},
+              {"title": "essay2", "grade": 85}
+            ],
+            "quiz": [
+              {"title": "vocabulary", "grade": 90},
+              {"title": "grammar", "grade": 80}
+            ],
+            "attendance": 95
+          }
+        ]
+      }
+    ],
+    "student_description": "Passionate about literature and writing, aspiring to become a published author.",
+    "suggested_materials": [
+      {
+        "course": "CSE339",
+        "suggested_books": ["Introduction to Algorithms", "Clean Code"],
+        "suggested_websites": ["https://www.geeksforgeeks.org/", "https://leetcode.com/"],
+        "suggested_videos": ["https://www.youtube.com/watch?v=HtSuA80QTyo", "https://www.youtube.com/watch?v=e5ik2UGjHBk"]
+      },
+      {
+        "course": "MATH201",
+        "suggested_books": ["Linear Algebra and Its Applications", "Matrix Analysis"],
+        "suggested_websites": ["https://www.khanacademy.org/math/linear-algebra", "https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/"],
+        "suggested_videos": ["https://www.youtube.com/watch?v=fNk_zzaMoSs", "https://www.youtube.com/watch?v=ZK3O402wf1c"]
+      }
+    ],
+    "student_analysis": "Consistently strong performance has been demonstrated in both essay assignments and quizzes. Their scores indicate a solid grasp of the course material and effective application of writing skills. Attendance has also been exemplary, reflecting their commitment to academic success. Encouragement and opportunities to further develop their writing talents will help them reach their goals."
+  },
+  {
+    "studentID": 3456789,
+    "firstName": "Alex",
+    "lastName": "Smith",
+    "courses": [
+      {
+        "course": "MATH202",
+        "courseDes": "Calculus II",
+        "grade": [
+          {
+            "homework": [
+              {"title": "problem set 1", "grade": 85},
+              {"title": "problem set 2", "grade": 80},
+              {"title": "problem set 3", "grade": 90}
+            ],
+            "quiz": [
+              {"title": "quiz1", "grade": 75},
+              {"title": "quiz2", "grade": 85},
+              {"title": "quiz3", "grade": 80}
+            ],
+            "attendance": 100
+          }
+        ]
+      }
+    ],
+    "student_description": "Enthusiastic about mathematics and its applications, aiming for a career in research or academia.",
+    "suggested_materials": [
+      {
+        "course": "CSE339",
+        "suggested_books": ["Introduction to Algorithms", "Clean Code"],
+        "suggested_websites": ["https://www.geeksforgeeks.org/", "https://leetcode.com/"],
+        "suggested_videos": ["https://www.youtube.com/watch?v=HtSuA80QTyo", "https://www.youtube.com/watch?v=e5ik2UGjHBk"]
+      },
+      {
+        "course": "MATH201",
+        "suggested_books": ["Linear Algebra and Its Applications", "Matrix Analysis"],
+        "suggested_websites": ["https://www.khanacademy.org/math/linear-algebra", "https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/"],
+        "suggested_videos": ["https://www.youtube.com/watch?v=fNk_zzaMoSs", "https://www.youtube.com/watch?v=ZK3O402wf1c"]
+      }
+    ],
+    "student_analysis": "Consistent effort and dedication are evident in their performance on problem sets and quizzes. Although their scores have shown some variation, overall, they have demonstrated a solid understanding of calculus concepts. Perfect attendance reflects their commitment to learning. Encouragement and further practice will help them refine their problem-solving skills and excel in advanced mathematics."
+  }
+]

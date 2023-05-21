@@ -1,38 +1,18 @@
 import type { AppProps } from "next/app";
 import React from "react";
 import RootLayout from "@/components/layout/layout";
-
-// Global Theme
-const theme = {
-  //@ts-ignore
-  components: {
-    MuiTimeline: {
-      styleOverrides: {
-        root: {
-          backgroundColor: "red",
-        },
-      },
-    },
-  },
-  typography: {
-    /*
-    fontFamily: '"Encode Sans", sans-serif',
-    */
-  },
-  palette: {
-    background: {
-      default: "#FFFFFF",
-    },
-    primary: { 500: "#4B2E83" },
-    secondary: { main: "#85754D" },
-  },
-};
+import "../style/global.css";
+// import { ThemeProvider } from "@mui/styles";
+import { ThemeProvider } from "@mui/material/styles";
+import { mainTheme } from "../style/theme";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <RootLayout>
-      <Component {...pageProps} />
-    </RootLayout>
+    <ThemeProvider theme={mainTheme}>
+      <RootLayout>
+        <Component {...pageProps} />
+      </RootLayout>
+    </ThemeProvider>
   );
 }
 export default MyApp;
