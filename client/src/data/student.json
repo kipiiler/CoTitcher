@@ -3,19 +3,31 @@
     "studentID": 2171789,
     "firstName": "Hoang",
     "lastName": "Nguyen",
-    "courses" : 
-    [
+    "courses": [
       {
         "course": "CSE339",
         "courseDes": "Introduction to Machine Learning",
-        "grade": [{
-          "homework": [
-            {"title":"homework1", "grade": 100},
-             {"title":"homework2", "grade": 90}
+        "grade": [
+          {
+            "homework": [
+              {
+                "title": "homework1",
+                "grade": 100
+              },
+              {
+                "title": "homework2",
+                "grade": 90
+              }
             ],
-          "quiz": [{"title":"quiz1", "grade": 100}],
-          "attendence": 100
-        }]
+            "quiz": [
+              {
+                "title": "quiz1",
+                "grade": 100
+              }
+            ],
+            "attendence": 100
+          }
+        ]
       },
       {
         "course": "MATH201",
@@ -23,11 +35,20 @@
         "grade": [
           {
             "homework": [
-              {"title": "homework1", "grade": 95},
-              {"title": "homework2", "grade": 85}
+              {
+                "title": "homework1",
+                "grade": 95
+              },
+              {
+                "title": "homework2",
+                "grade": 85
+              }
             ],
             "quiz": [
-              {"title": "quiz1", "grade": 90}
+              {
+                "title": "quiz1",
+                "grade": 90
+              }
             ],
             "attendance": 95
           }
@@ -38,20 +59,38 @@
     "suggested_materials": [
       {
         "course": "CSE339",
-        "suggested_books": ["Introduction to Algorithms", "Clean Code"],
-        "suggested_websites": ["https://www.geeksforgeeks.org/", "https://leetcode.com/"],
-        "suggested_videos": ["https://www.youtube.com/watch?v=HtSuA80QTyo", "https://www.youtube.com/watch?v=e5ik2UGjHBk"]
+        "suggested_books": [
+          "Introduction to Algorithms",
+          "Clean Code"
+        ],
+        "suggested_websites": [
+          "https://www.geeksforgeeks.org/",
+          "https://leetcode.com/"
+        ],
+        "suggested_videos": [
+          "https://www.youtube.com/watch?v=HtSuA80QTyo",
+          "https://www.youtube.com/watch?v=e5ik2UGjHBk"
+        ]
       },
       {
         "course": "MATH201",
-        "suggested_books": ["Linear Algebra and Its Applications", "Matrix Analysis"],
-        "suggested_websites": ["https://www.khanacademy.org/math/linear-algebra", "https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/"],
-        "suggested_videos": ["https://www.youtube.com/watch?v=fNk_zzaMoSs", "https://www.youtube.com/watch?v=ZK3O402wf1c"]
+        "suggested_books": [
+          "Linear Algebra and Its Applications",
+          "Matrix Analysis"
+        ],
+        "suggested_websites": [
+          "https://www.khanacademy.org/math/linear-algebra",
+          "https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/"
+        ],
+        "suggested_videos": [
+          "https://www.youtube.com/watch?v=fNk_zzaMoSs",
+          "https://www.youtube.com/watch?v=ZK3O402wf1c"
+        ]
       }
     ],
-    "student_anal": "It has shown consistent improvement in their performance over the five recent homework assignments. Their scores have steadily increased, indicating a deeper understanding of the material and a growing mastery of the subject matter. This upward trend suggests that the student is actively engaged in their studies and making commendable efforts to excel academically. Continued support and guidance will help nurture their potential even further." 
+    "student_anal": "It has shown consistent improvement in their performance over the five recent homework assignments. Their scores have steadily increased, indicating a deeper understanding of the material and a growing mastery of the subject matter. This upward trend suggests that the student is actively engaged in their studies and making commendable efforts to excel academically. Continued support and guidance will help nurture their potential even further."
   },
-    {
+  {
     "studentID": 2345678,
     "firstName": "Emma",
     "lastName": "Johnson",
@@ -62,12 +101,24 @@
         "grade": [
           {
             "homework": [
-              {"title": "essay1", "grade": 95},
-              {"title": "essay2", "grade": 85}
+              {
+                "title": "essay1",
+                "grade": 95
+              },
+              {
+                "title": "essay2",
+                "grade": 85
+              }
             ],
             "quiz": [
-              {"title": "vocabulary", "grade": 90},
-              {"title": "grammar", "grade": 80}
+              {
+                "title": "vocabulary",
+                "grade": 90
+              },
+              {
+                "title": "grammar",
+                "grade": 80
+              }
             ],
             "attendance": 95
           }
@@ -78,15 +129,33 @@
     "suggested_materials": [
       {
         "course": "CSE339",
-        "suggested_books": ["Introduction to Algorithms", "Clean Code"],
-        "suggested_websites": ["https://www.geeksforgeeks.org/", "https://leetcode.com/"],
-        "suggested_videos": ["https://www.youtube.com/watch?v=HtSuA80QTyo", "https://www.youtube.com/watch?v=e5ik2UGjHBk"]
+        "suggested_books": [
+          "Introduction to Algorithms",
+          "Clean Code"
+        ],
+        "suggested_websites": [
+          "https://www.geeksforgeeks.org/",
+          "https://leetcode.com/"
+        ],
+        "suggested_videos": [
+          "https://www.youtube.com/watch?v=HtSuA80QTyo",
+          "https://www.youtube.com/watch?v=e5ik2UGjHBk"
+        ]
       },
       {
         "course": "MATH201",
-        "suggested_books": ["Linear Algebra and Its Applications", "Matrix Analysis"],
-        "suggested_websites": ["https://www.khanacademy.org/math/linear-algebra", "https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/"],
-        "suggested_videos": ["https://www.youtube.com/watch?v=fNk_zzaMoSs", "https://www.youtube.com/watch?v=ZK3O402wf1c"]
+        "suggested_books": [
+          "Linear Algebra and Its Applications",
+          "Matrix Analysis"
+        ],
+        "suggested_websites": [
+          "https://www.khanacademy.org/math/linear-algebra",
+          "https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/"
+        ],
+        "suggested_videos": [
+          "https://www.youtube.com/watch?v=fNk_zzaMoSs",
+          "https://www.youtube.com/watch?v=ZK3O402wf1c"
+        ]
       }
     ],
     "student_analysis": "Consistently strong performance has been demonstrated in both essay assignments and quizzes. Their scores indicate a solid grasp of the course material and effective application of writing skills. Attendance has also been exemplary, reflecting their commitment to academic success. Encouragement and opportunities to further develop their writing talents will help them reach their goals."
@@ -102,14 +171,32 @@
         "grade": [
           {
             "homework": [
-              {"title": "problem set 1", "grade": 85},
-              {"title": "problem set 2", "grade": 80},
-              {"title": "problem set 3", "grade": 90}
+              {
+                "title": "problem set 1",
+                "grade": 85
+              },
+              {
+                "title": "problem set 2",
+                "grade": 80
+              },
+              {
+                "title": "problem set 3",
+                "grade": 90
+              }
             ],
             "quiz": [
-              {"title": "quiz1", "grade": 75},
-              {"title": "quiz2", "grade": 85},
-              {"title": "quiz3", "grade": 80}
+              {
+                "title": "quiz1",
+                "grade": 75
+              },
+              {
+                "title": "quiz2",
+                "grade": 85
+              },
+              {
+                "title": "quiz3",
+                "grade": 80
+              }
             ],
             "attendance": 100
           }
@@ -120,17 +207,208 @@
     "suggested_materials": [
       {
         "course": "CSE339",
-        "suggested_books": ["Introduction to Algorithms", "Clean Code"],
-        "suggested_websites": ["https://www.geeksforgeeks.org/", "https://leetcode.com/"],
-        "suggested_videos": ["https://www.youtube.com/watch?v=HtSuA80QTyo", "https://www.youtube.com/watch?v=e5ik2UGjHBk"]
+        "suggested_books": [
+          "Introduction to Algorithms",
+          "Clean Code"
+        ],
+        "suggested_websites": [
+          "https://www.geeksforgeeks.org/",
+          "https://leetcode.com/"
+        ],
+        "suggested_videos": [
+          "https://www.youtube.com/watch?v=HtSuA80QTyo",
+          "https://www.youtube.com/watch?v=e5ik2UGjHBk"
+        ]
       },
       {
         "course": "MATH201",
-        "suggested_books": ["Linear Algebra and Its Applications", "Matrix Analysis"],
-        "suggested_websites": ["https://www.khanacademy.org/math/linear-algebra", "https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/"],
-        "suggested_videos": ["https://www.youtube.com/watch?v=fNk_zzaMoSs", "https://www.youtube.com/watch?v=ZK3O402wf1c"]
+        "suggested_books": [
+          "Linear Algebra and Its Applications",
+          "Matrix Analysis"
+        ],
+        "suggested_websites": [
+          "https://www.khanacademy.org/math/linear-algebra",
+          "https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/"
+        ],
+        "suggested_videos": [
+          "https://www.youtube.com/watch?v=fNk_zzaMoSs",
+          "https://www.youtube.com/watch?v=ZK3O402wf1c"
+        ]
       }
     ],
     "student_analysis": "Consistent effort and dedication are evident in their performance on problem sets and quizzes. Although their scores have shown some variation, overall, they have demonstrated a solid understanding of calculus concepts. Perfect attendance reflects their commitment to learning. Encouragement and further practice will help them refine their problem-solving skills and excel in advanced mathematics."
+  },
+  {
+    "studentID": 1234567,
+    "firstName": "Emily",
+    "lastName": "Johnson",
+    "courses": [
+      {
+        "course": "PHYS101",
+        "courseDes": "Introduction to Physics",
+        "grade": [
+          {
+            "homework": [
+              {
+                "title": "problem set 1",
+                "grade": 90
+              },
+              {
+                "title": "problem set 2",
+                "grade": 95
+              },
+              {
+                "title": "problem set 3",
+                "grade": 85
+              }
+            ],
+            "quiz": [
+              {
+                "title": "quiz1",
+                "grade": 80
+              },
+              {
+                "title": "quiz2",
+                "grade": 90
+              },
+              {
+                "title": "quiz3",
+                "grade": 85
+              }
+            ],
+            "attendance": 100
+          }
+        ]
+      }
+    ],
+    "student_description": "Passionate about physics and fascinated by the mysteries of the universe. Aspires to contribute to scientific advancements in the field of astrophysics.",
+    "suggested_materials": [
+      {
+        "course": "ASTRO201",
+        "suggested_books": [
+          "An Introduction to Modern Astrophysics",
+          "The Cosmic Perspective"
+        ],
+        "suggested_websites": [
+          "https://www.nasa.gov/",
+          "https://www.space.com/"
+        ],
+        "suggested_videos": [
+          "https://www.youtube.com/watch?v=tmNXKqeUtJM",
+          "https://www.youtube.com/watch?v=UyD7A7jvTis"
+        ]
+      },
+      {
+        "course": "PHYS202",
+        "suggested_books": [
+          "Classical Mechanics",
+          "Introduction to Electrodynamics"
+        ],
+        "suggested_websites": [
+          "https://www.khanacademy.org/science/physics",
+          "https://www.physicsclassroom.com/"
+        ],
+        "suggested_videos": [
+          "https://www.youtube.com/watch?v=ApUFtLCrU90",
+          "https://www.youtube.com/watch?v=bkzv6gEh6jg"
+        ]
+      }
+    ],
+    "student_analysis": "Emily consistently demonstrates exceptional performance on problem sets and quizzes, indicating a strong grasp of physics concepts. Perfect attendance reflects her commitment to learning and engagement in class. With her passion and dedication, she is well-positioned to excel in advanced physics courses. Encouraging her curiosity and providing opportunities for further exploration will nurture her potential in astrophysics."
+  },
+  {
+      "studentID": 1234597,
+      "firstName": "John",
+      "lastName": "Smith",
+      "courses": [
+        {
+          "course": "CHEM101",
+          "courseDes": "Introduction to Chemistry",
+          "grades": {
+            "homework": [
+              {
+                "title": "Assignment 1",
+                "grade": 90
+              },
+              {
+                "title": "Assignment 2",
+                "grade": 85
+              }
+            ],
+            "quiz": [
+              {
+                "title": "Quiz 1",
+                "grade": 95
+              }
+            ],
+            "attendance": 100
+          }
+        }
+      ],
+      "student_description": "Interested in pursuing a career in chemical engineering, with a focus on environmental sustainability.",
+      "suggested_materials": [{
+          "course": "CHEM101",
+          "suggested_books": [
+            "Chemistry: The Central Science",
+            "Organic Chemistry"
+          ],
+          "suggested_websites": [
+            "https://www.khanacademy.org/science/chemistry",
+            "https://www.chemguide.co.uk/"
+          ],
+          "suggested_videos": [
+            "https://www.youtube.com/watch?v=VgVQKCcfwnU",
+            "https://www.youtube.com/watch?v=zi6lERD0GTA"
+          ]
+      }],
+      "student_analysis": "John consistently performs well on assignments and quizzes, demonstrating a solid understanding of chemistry concepts. His perfect attendance reflects his commitment to academic success. Encouraging his passion for environmental sustainability and providing opportunities for hands-on experimentation will help him thrive in the field of chemical engineering."
+    },
+    {
+      "studentID": 9876543,
+      "firstName": "Sarah",
+      "lastName": "Williams",
+      "courses": [
+        {
+          "course": "ART101",
+          "courseDes": "Introduction to Art History",
+          "grades": {
+            "homework": [
+              {
+                "title": "Art Analysis",
+                "grade": 92
+              },
+              {
+                "title": "Art Critique",
+                "grade": 88
+              }
+            ],
+            "quiz": [
+              {
+                "title": "Art Movements",
+                "grade": 85
+              }
+            ],
+            "attendance": 90
+          }
+        }
+      ],
+      "student_description": "Enthusiastic about exploring different art forms and aspiring to become a professional artist.",
+      "suggested_materials": [{
+           "course": "CHEM101",
+          "suggested_books": [
+            "The Story of Art",
+            "Ways of Seeing"
+          ],
+          "suggested_websites": [
+            "https://www.metmuseum.org/",
+            "https://www.artsy.net/"
+          ],
+          "suggested_videos": [
+            "https://www.youtube.com/watch?v=0pDE4VX_9Kk",
+            "https://www.youtube.com/watch?v=kN9zP6egKuA"
+          ]
+        }
+      ],
+      "student_analysis": "Sarah consistently produces insightful and well-crafted art analyses and critiques. Her attendance is good, showing an active engagement in the course. Encouraging her creativity and providing exposure to diverse artistic styles and techniques will help nurture her talent and support her aspirations to become a professional artist."
   }
 ]
