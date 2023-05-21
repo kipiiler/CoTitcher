@@ -94,8 +94,8 @@ app.post("/lessongen/", async(req, res) => {
 app.post("/quizgen/", async(req, res) => {
     console.log(req.body)
     const {topic, difficulty, classData, otherRequire, standard} = req.body;
-    let prompt = classData + " level "  + topic + " quiz " + difficulty +
-        "," + otherRequire + "compliance with " + standard;
+    let prompt = + classData + " level "  + topic + " quiz " + difficulty + "," + otherRequire +
+        "compliance with " + standard + " that can be done in";
     const configuration = new Configuration({
         apiKey: process.env.OPEN_API_KEY,
     });

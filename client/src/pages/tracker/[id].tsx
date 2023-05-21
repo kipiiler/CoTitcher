@@ -1,9 +1,129 @@
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo} from "react";
 import Student from "../../data/student.json";
-import { Card, CardContent, Grid, Link, Typography } from "@mui/material";
-import { Bar } from "react-chartjs-2";
+import {Card, CardContent, Grid, Link, TextField, Typography} from "@mui/material";
+import { Bar, Line } from "react-chartjs-2";
 import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+    Filler,
+} from "chart.js";
+
+ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    BarElement,
+    Title,
+    Tooltip,
+    Legend,
+    Filler
+);
+
+const scores = [18, 24, 33, 45, 55];
+const labels = ["HW1", "HW2", "HW3", "HW4", "HW5"];
+
+// const scores = [6, 5, 5, 5, 3, 4, 6, 4, 5];
+// const labels = ["HW1", 200, 300, 400, 500, 600, 700];
+
+
+const options = {
+    fill: true,
+    animations: false,
+    scales: {
+        y: {
+            min: 0,
+        },
+    },
+    responsive: true,
+    plugins: {
+        legend: {
+            display: true,
+        },
+    },
+};
+
+const Analysis = ({ analysisText }) => {
+    return (
+        <div style={{ flex: 1, padding: '20px' }}>
+            <h2>Analysis</h2>
+            <p>{analysisText}</p>
+        </div>
+    );
+};
+
+function BarChart({analysisText, student, selectedCourse, selectedWorkType}) {
+    const [selectedCourse, setSelectedCourse] = useState(selectedCourse);
+    const [selectedWorkType, setSelectedWorkType] = useState(selectedWorkType);
+
+    const course = student.courses.find(c => c.course === selectedCourse);
+    console.log(student.courses)
+    // const grades = course.grade;
+    // const labels = grades.map(g => g.title);
+    // const scores = grades.map(g => g.grade);
+
+    useEffect(() => {
+        console.log(student.courses)
+        if(student.courses.length != 0) {
+            const course = student.courses.find(c => c.course === selectedCourse);
+            const grades = course.grade;
+            const labels = grades.map(g => g.title);
+            const scores = grades.map(g => g.grade);
+            console.log(scores)
+        }
+    }, [student])
+
+    const data = useMemo(function () {
+        return {
+            datasets: [
+                {
+                    label: "Scores",
+                    tension: 0.3,
+                    data: scores,
+                    borderColor: "rgb(128, 128, 128)",
+                    backgroundColor: "rgba(128, 128, 128, 0.3)",
+                },
+            ],
+            labels,
+        };
+    }, []);
+
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: 'auto' }}>
+            <div style={{ marginBottom: '20px' }}>
+                <TextField select value={selectedCourse} onChange={(e) => setSelectedCourse(e.target.value)} style={{ marginRight: '10px' }}>
+                    <MenuItem value="">Select Course</MenuItem>
+                    <MenuItem value="course1">Course 1</MenuItem>
+                    <MenuItem value="course2">Course 2</MenuItem>
+                    // Add more course options...
+                </TextField>
+
+                <TextField select value={selectedWorkType} onChange={(e) => setSelectedWorkType(e.target.value)}>
+                    <MenuItem value="">Select Work Type</MenuItem>
+                    <MenuItem value="homework">Homework</MenuItem>
+                    <MenuItem value="quiz">Quiz</MenuItem>
+                    // Add more work type options...
+                </TextField>
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'flex-start', height: 'auto' }}>
+                <div style={{ height: '300px', width: '400px' }}>
+                    <Bar data={data} options={options} />
+                </div>
+                <Analysis analysisText={analysisText} />
+            </div>
+        </div>
+    );
+}
+
+
 
 interface GradeComponent {
   title: string;
@@ -226,6 +346,7 @@ export default function TrackerID() {
             {student.firstName} &nbsp;{student.lastName}
           </Typography>
         </Grid>
+          <BarChart analysisText={student.student_analysis} student={student} selectedCourse={student?.courses[0]?.course} selectedWorkType={"homework"}></BarChart>
         {/* <GradeGraph course={student.courses[0]} /> */}
         <Grid item xs={12}>
           <Typography
