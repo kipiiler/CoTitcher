@@ -5,6 +5,9 @@ import React, { useState } from "react";
 const generated_sample =
   "Standards\n\nSubject: Mathematics\n\nGrade level: 3rd grade\n\nObjective: Students will be able to solve addition and subtraction problems using strategies such as counting on and counting back to obtain the correct solution.\n\nFL standards: MAFS.3.OA.1.1, MAFS.3.OA.1.2, MAFS.3.OA.1.3\n\nMaterials Needed:\n\n- Whiteboard and dry erase markers\n- Number line\n- Base ten blocks\n- Addition and subtraction flashcards\n- Printouts of addition and subtraction word problems\n- Crayons or colored pencils\n\nProcedure:\n\nIntroduction (5 minutes):\n\n- Greet students and review the objective for today's lesson.\n- Ask students if they remember any strategies for solving addition and subtraction problems.\n\nDirect Instruction (20 minutes):\n\n- Display the number line and explain to students how it can be used to add and subtract numbers.\n- Model counting on and counting back on the number line, and then give students an opportunity to practice with a partner.\n- Introduce the use of base ten blocks to represent numbers during addition and subtraction.\n- Use addition and subtraction flashcards to review number facts with the class, and have students practice solving them using base ten blocks. \n- Hand out printed addition and subtraction word problems and have students solve them in groups using crayons or colored pencils to highlight important information.\n\nGuided Practice (15 minutes):\n\n- Write an addition or subtraction problem on the board and ask students to solve it using the strategies they have learned.\n- Encourage students to work in pairs or small groups and discuss their thinking with each other.\n- Circulate around the classroom and provide support and guidance as needed.\n\nIndependent Practice (15 minutes):\n\n- Distribute independent practice worksheets to students.\n- Remind them to use the strategies they have learned and encourage them to check their work.\n- Collect worksheets at the end of the lesson to monitor student progress.\n\nClosure (5 minutes):\n\n- Ask a few students to share their strategies for solving an addition or subtraction problem with the class.\n- Summarize the key concepts covered in the lesson and review the objective.\n- Assign homework if needed. \n\nAccommodations for ADHD students:\n\n- Provide frequent breaks to help them refocus.\n- Use visual aids such as the number line and base ten blocks to make lessons more engaging.\n- Give verbal reminders to stay on task during independent practice.\n- Provide extra support and guidance during guided practice.";
 
+const placeholderForLesson =
+  "- Focus on ADHD study \n - Mutiple breaks \n - Add revision from linear algebra \n - Using current teen trend to create story in questions \n - Using my uploaded document \n - Funny, easy to follow";
+
 function DashBoard() {
   const [input, setInput] = useState({
     topic: "",
@@ -65,6 +68,7 @@ function DashBoard() {
             </Grid>
             <Grid item xs={12}>
               <TextField
+                placeholder="Calculus, K12 Math, ..."
                 onChange={handleInputChange}
                 value={input.topic}
                 name="topic"
@@ -131,11 +135,11 @@ function DashBoard() {
                 select
                 style={{ width: "100%" }}
               >
-                <MenuItem value={"CSE331 Sp23"}>CSE331 Sp23</MenuItem>
-                <MenuItem value={"ECON200"}>ECON200</MenuItem>
-                <MenuItem value={"PHYS121"}>PHYS121</MenuItem>
-                <MenuItem value={"Class C"}>Class C</MenuItem>
-                <MenuItem value={"SPEC80T"}>SPEC80T</MenuItem>
+                <MenuItem value={"Math"}>Math</MenuItem>
+                <MenuItem value={"French"}>French</MenuItem>
+                <MenuItem value={"Physics"}>Physics</MenuItem>
+                <MenuItem value={"Classical Music"}>Classical Music</MenuItem>
+                <MenuItem value={"Biology"}>Biology</MenuItem>
               </TextField>
             </Grid>
           </Grid>
@@ -149,6 +153,7 @@ function DashBoard() {
         </Grid>
         <Grid item xs={12}>
           <TextField
+            placeholder={placeholderForLesson}
             style={{ width: "100%" }}
             onChange={handleInputChange}
             value={input.otherRequire}

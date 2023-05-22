@@ -22,7 +22,7 @@
             "quiz": [
               {
                 "title": "quiz1",
-                "grade": 100
+                "grade": 80
               }
             ],
             "attendence": 100
@@ -41,13 +41,25 @@
               },
               {
                 "title": "homework2",
-                "grade": 85
+                "grade": 5
               }
             ],
             "quiz": [
               {
                 "title": "quiz1",
-                "grade": 90
+                "grade": 10
+              },
+              {
+                "title": "quiz2",
+                "grade": 40
+              },
+              {
+                "title": "quiz3",
+                "grade": 80
+              },
+              {
+                "title": "quiz4",
+                "grade": 100
               }
             ],
             "attendance": 95

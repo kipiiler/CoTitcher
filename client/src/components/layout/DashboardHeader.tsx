@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import Logo from "../../static/logo.svg";
 import Image from "next/image";
@@ -110,9 +110,18 @@ function DashBoardHeader() {
         </Grid>
 
         <Grid item style={{ padding: 20 }}>
-          <Typography style={{ color: "white" }}>
-            Welcome back, Hoang
-          </Typography>
+          <Grid container>
+            <Grid item>
+              <Typography style={{ color: "white", padding: 24 }}>
+                Welcome back, Hoang
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Button variant="contained">
+                <Typography>Upgrade to premium</Typography>
+              </Button>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
     </>

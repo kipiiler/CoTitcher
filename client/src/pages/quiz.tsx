@@ -128,11 +128,11 @@ function DashBoard() {
                 select
                 style={{ width: "100%" }}
               >
-                <MenuItem value={"CSE331 Sp23"}>CSE331 Sp23</MenuItem>
-                <MenuItem value={"ECON200"}>ECON200</MenuItem>
-                <MenuItem value={"PHYS121"}>PHYS121</MenuItem>
-                <MenuItem value={"Class C"}>Class C</MenuItem>
-                <MenuItem value={"SPEC80T"}>SPEC80T</MenuItem>
+                <MenuItem value={"Math"}>Math</MenuItem>
+                <MenuItem value={"French"}>French</MenuItem>
+                <MenuItem value={"Physics"}>Physics</MenuItem>
+                <MenuItem value={"Classical Music"}>Classical Music</MenuItem>
+                <MenuItem value={"Biology"}>Biology</MenuItem>
               </TextField>
             </Grid>
           </Grid>
